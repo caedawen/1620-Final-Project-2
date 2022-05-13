@@ -120,7 +120,7 @@ class Ui_MainWindow(object):
         icon_url = 'https://openweathermap.org/img/wn/' + icon + '@4x.png'
         image = QImage()
         image.loadFromData(requests.get(icon_url).content)
-        self.weather_description_output.setText(f'There are {description} for {selection} right now!')
+        self.weather_description_output.setText(f'There is {description} for {selection} right now!')
         self.f_temp.setText(f'{temp_fahrenheit:.2f}')
         self.c_temp.setText(f'{temp_celsius:.2f}')
         self.weather_icon_output.setPixmap(QtGui.QPixmap(image))
